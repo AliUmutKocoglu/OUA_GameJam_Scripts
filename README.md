@@ -22,4 +22,4 @@ https://magnazur.itch.io/free-rustic-house-interior-tileset-for-rpg-maker-mv
 
 https://assetstore.unity.com/packages/2d/gui/2d-modular-cards-kit-demo-227623
 
-Ek olarak kullandığımız video programı microsoftun ücretsiz Clipchamp uygulamasıdır. Ayrıca müzikde Clipchamp'de ücretsiz olarak kullanabildiğimiz müziktir.
+Ek olarak kullandığımız video programı microsoftun ücretsiz Clipchamp uygulamasıdır. Müzik, Clipchamp'de ücretsiz olarak kullanabilir.
