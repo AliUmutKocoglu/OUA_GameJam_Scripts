@@ -1,7 +1,7 @@
 # OUA_GameJam_Scripts
 U-74 Game Academy Village Scripts and Assets
-Asset txt'si klasörün içinde.
-Ayrıca burayada yazıyorum:
+Asset txt'si klasörün içindedir.
+Ayrıca aşşağı da linkleri de ekliyorum:
 https://assetstore.unity.com/packages/2d/environments/free-platform-game-assets-85838
 
 https://assetstore.unity.com/packages/2d/gui/fantasy-wooden-gui-free-103811
@@ -22,4 +22,4 @@ https://magnazur.itch.io/free-rustic-house-interior-tileset-for-rpg-maker-mv
 
 https://assetstore.unity.com/packages/2d/gui/2d-modular-cards-kit-demo-227623
 
-Ek olarak kullandığımız video programı microsoftun ücretsiz Clipchamp uygulamasıdır ayrıca müzikde Clipchamp'de ücretsiz olarak kullanabildiğimiz müziktir.
+Ek olarak kullandığımız video programı microsoftun ücretsiz Clipchamp uygulamasıdır. Ayrıca müzikde Clipchamp'de ücretsiz olarak kullanabildiğimiz müziktir.
