@@ -1,0 +1,133 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using TMPro;
+using UnityEditor;
+using UnityEngine.SceneManagement;
+
+public class IngilizceDialog : MonoBehaviour
+{
+    public TextMeshProUGUI text;
+    public GameObject AtilHoca;
+    public GameObject OurCharacter;
+    public string[] lines;
+    public float textSpeed;
+    private int index;
+    public int ClickCount = 0;
+
+    void Start()
+    {
+        text.text = string.Empty;
+        StartDialoge();
+
+    }
+
+    void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            ClickCount++;
+            if (text.text == lines[index])
+            {
+                SkipLine();
+            }
+            else
+            {
+                StopAllCoroutines();
+                text.text = lines[index];
+            }
+            if (ClickCount == 7)
+            {
+                SceneManager.LoadScene(30);
+                Invoke("DeleteClickCount", 1f);
+            }
+        }
+        else if (Input.GetKeyDown(KeyCode.Space))
+        {
+            ClickCount++;
+            if (text.text == lines[index])
+            {
+                SkipLine();
+            }
+            else
+            {
+                StopAllCoroutines();
+                text.text = lines[index];
+            }
+            if (ClickCount == 7)
+            {
+                SceneManager.LoadScene(30);
+                Invoke("DeleteClickCount", 1f);
+            }
+        }
+        if (ClickCount == 0)
+        {
+            OurCharacter.SetActive(true);
+        }
+        else if (ClickCount == 1)
+        {
+            OurCharacter.SetActive(false);
+            AtilHoca.SetActive(true);
+        }
+        else if (ClickCount == 2)
+        {
+            OurCharacter.SetActive(true);
+            AtilHoca.SetActive(false);
+        }
+        else if (ClickCount == 3)
+        {
+            OurCharacter.SetActive(false);
+            AtilHoca.SetActive(true);
+        }
+        else if (ClickCount == 4)
+        {
+            OurCharacter.SetActive(true);
+            AtilHoca.SetActive(false);
+        }
+        else if (ClickCount == 5)
+        {
+            OurCharacter.SetActive(false);
+            AtilHoca.SetActive(true);
+        }
+        else if (ClickCount == 6)
+        {
+            OurCharacter.SetActive(false);
+            AtilHoca.SetActive(true);
+        }
+        else if(ClickCount == 7)
+        {
+            AtilHoca.SetActive(false);
+        }
+    }
+
+    void StartDialoge()
+    {
+        index = 0;
+        StartCoroutine(TypeLine());
+    }
+    IEnumerator TypeLine()
+    {
+        foreach (char s in lines[index].ToCharArray())
+        {
+            text.text += s;
+            yield return new WaitForSeconds(textSpeed);
+        }
+    }
+    void SkipLine()
+    {
+        if (index < lines.Length - 1)
+        {
+            index++;
+            text.text = string.Empty;
+            StartCoroutine(TypeLine());
+        }
+        else
+        {
+            gameObject.SetActive(false);
+        }
+    }
+    void DeleteClickCount()
+    {
+        ClickCount = 0;
+    }
+}
